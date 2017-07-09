@@ -13,7 +13,7 @@ export default {
     userFormButton: "登录",
     userRegister:"注册",
     /*Server Info*/
-    serverAddr: "http://localhost:8080",
+    serverAddr: "http://172.18.7.103:8077/cloudkits_2.11-1.0",
     // serverAddr: "http://172.18.7.103:8080",
     dlServerAddr: "http://localhost:8088",
     /*Home Page*/
