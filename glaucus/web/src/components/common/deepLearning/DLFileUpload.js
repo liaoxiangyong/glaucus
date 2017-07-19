@@ -40,6 +40,9 @@ class DLFileUpload extends React.Component {
     render() {
         const props = {
             name: 'file',
+            headers:{
+                "authorization":'Bearer '+sessionStorage.token,
+            },
             action: Strings.serverAddr + '/api/picture/upload',
             data: {
                 'fileName': this.state.filename,
