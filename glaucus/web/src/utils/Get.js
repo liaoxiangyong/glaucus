@@ -28,16 +28,26 @@ export default function (url, config) {
     /**
      * @param config 其他继承的配置
      */
-     config = {
+    if(config===undefined) config={};
+    let configs=Object.assign(config, {
         noCache: false,
         raw: false,
         credentials: 'include',
         headers: {
-            "authorization":'Bearer '+sessionStorage.token,
             'Content-Type': 'application/json',
+            "authorization":'Bearer '+sessionStorage.token,
         }
-    };
-    return fetch(Strings.serverAddr + url, config)
+    });
+    //  config = {
+    //     noCache: false,
+    //     raw: false,
+    //     credentials: 'include',
+    //     headers: {
+    //         "authorization":'Bearer '+sessionStorage.token,
+    //         'Content-Type': 'application/json',
+    //     }
+    // };
+    return fetch(Strings.serverAddr + url, configs)
         .then(checkStatus)
         .then(parseJSON)
         .then(function(response) {
