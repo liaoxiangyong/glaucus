@@ -13,7 +13,8 @@ import { connect } from 'react-redux';
  */
 class App extends React.Component {
     render() {
-        let userId=this.props.loginManage.userId;
+        // let userId=this.props.loginManage.userId;
+        let userId=sessionStorage.userId;
         const tag = this.props.params.tag;
         const plus = this.props.params.plus;
         let content = [];
