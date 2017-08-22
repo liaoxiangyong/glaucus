@@ -139,6 +139,8 @@ export default (state = initialState, action) => {
                 modalData: Object.assign({}, state.modalData, {
                     visible:false,
                     targetKeys:[],
+                    anaResult:[],
+                    confirmLoading:false
                 }),
                 // selectFunction:"", //选择的字段函数
                 // functionDescription:"", //所选函数的描述
