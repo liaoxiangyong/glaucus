@@ -147,7 +147,7 @@ export default (state = initialState, action) => {
             });
         case 'UPDATE_ALL':
             const header1 = action.fileInfoData.headerInfos;
-            const newFileInfo1=fileInfoData.length===0?[]:Object.keys(header1).map(id => {
+            const newFileInfo1=action.fileInfoData.length===0?[]:Object.keys(header1).map(id => {
                 return {
                     "aliasName":header1[id].aliasName,
                     "fieldDes":header1[id].fieldDes,
